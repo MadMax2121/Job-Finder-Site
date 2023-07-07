@@ -1,0 +1,46 @@
+.header {
+    position: sticky;
+    top: 0; /* Sticks to top of screen */
+    display: flex; /* Everything goes into a line */
+    background-color: white;
+    justify-content: space-evenly;
+    border-bottom: 0.1px solid lightgray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    z-index: 999;
+}
+
+.headerLeft {
+    display: flex; /* Everything goes into a line */
+}
+
+/* Header left target the image */
+.headerLeft > img {
+    
+    object-fit: contain; /* When image gets resized it will keep the aspect ratio */
+    width: 40px;
+    margin-right: 10px;
+}
+
+.headerSearch {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    height: 22px;
+    color: gray;
+    background-color: #eef3f8;
+}
+
+.headerSearch > input {
+    outline: none; /* No blue box when typing */
+    border: none;
+    background: none;
+}
+
+.headerRight {
+    display: flex;
+}
+
+
