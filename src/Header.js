@@ -7,7 +7,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import EmailIcon from '@mui/icons-material/Email';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import HeaderOption from './HeaderOption';
-import Dropdown from './Dropdown';
+import Dropdown from './Dropdown.tsx';
 
 
 function Header() {
@@ -29,22 +29,26 @@ function Header() {
         
     
         <div className="headerRight">
-            {
-              openProfile && (
-                <Dropdown/>
-              )
-            }
+            
             <HeaderOption Icon={HomeIcon} title='Home'/>
             <HeaderOption Icon={SupervisedUserCircleIcon} title='My Network'/>
             <HeaderOption Icon={WorkIcon} title = 'Jobs' />
             <HeaderOption Icon={EmailIcon} title = 'Messages' />
             <HeaderOption Icon={NotificationsActiveIcon} title = 'Notifications' />
             
+          
+            <div className="avatar">
             <HeaderOption avatar={true} title = "Me" onClick = {() => setOpenProfile((prev) => !prev)}/>
-
-        </div>
+            <div className="menu">
+              {
+                openProfile && (
+                    <Dropdown/>
+                )
+              }
+              </div>
+            </div>
+          </div>
     </div>
-  )
-}
+)}
 
 export default Header

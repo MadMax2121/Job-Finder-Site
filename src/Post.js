@@ -38,7 +38,7 @@ const Post = forwardRef(({ displayName, description, message, photoUrl, timestam
             </div>
 
             <div className="postButtons">
-                <InputOption Icon={ThumbUpIcon} title="Like" color ="grey"/>
+                <InputOption className="like_button" Icon={ThumbUpIcon} title="Like" color ="grey"/>
                 <InputOption Icon={CommentIcon} title="Comment" color ="grey"/>
                 <InputOption Icon={ShareIcon} title="Share" color ="grey"/>
                 <InputOption Icon={SendIcon} title="Send" color ="grey"/>
